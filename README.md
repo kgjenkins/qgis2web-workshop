@@ -227,11 +227,11 @@ If you like your changes and want to commit them:
 - Enter a brief message describing the commit
 - Click the checkmark icon at the top -- this commits the staged changes to your local Git repository
 
-# Pushing your changes to GitHub
+https://user-images.githubusercontent.com/3355358/173695377-03da23a7-5c18-439b-90c3-577c98adb2f0.mp4
+
+### Pushing your changes to GitHub
 
 - Click "Sync Changes" to push the changes to GitHub
-
-https://user-images.githubusercontent.com/3355358/173695377-03da23a7-5c18-439b-90c3-577c98adb2f0.mp4
 
 At this point, you can reload your repository page on GitHub to confirm that your changes appear there.  There is no need to do anything else for GitHub Pages, since it will automatically update your site whenever new changes are pushed to GitHub.
 
