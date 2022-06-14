@@ -139,9 +139,10 @@ Before we start any editing, let's create a local repository so that we can trac
 
 You should see a list of all 51 files within the `dogs-webmap` folder.  The `U` to the right of each filename means that the file is currently untracked.  We want to track all these files, so:
 
-- On the row at the top that says "Changes", click the `+` symbol to stage all changes.
+- On the row at the top that says "Changes", click the `+` symbol to stage all changes.  (We could also stage files individually, but in this case we want them all.)
 
 ![image](https://user-images.githubusercontent.com/3355358/173660915-fd6ab735-40f7-4c6f-95d1-7aa1a29edcbe.png)
+
 
 
 
