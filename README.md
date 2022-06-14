@@ -128,7 +128,19 @@ Let's open all this as a project within VS Code
 - Right-click the blank space within the `dogs-webmap` folder > Open with Code
 - Close the "Get Started" tab if it appears
 
+On the left, you should see a list of the folders and files in the `dogs-webmap` folder.  If you don't see it, click the top icon ("Explorer") that looks like pages.
+
 ![image](https://user-images.githubusercontent.com/3355358/173659220-7eec4e46-cb77-4a3a-bb3a-56a44ac80dbe.png)
+
+Before we start any editing, let's create a local repository so that we can track any changes.
+
+- Click the 3rd icon ("Source Control")
+- Click the "Initial Repository" button
+
+You should see a list of all 51 files within the `dogs-webmap` folder.  The `U` to the right of each filename means that the file is currently untracked.  We want to track all these files, so:
+
+- On the row at the top that says "Changes", click the `+` symbol to stage all changes.
+
 
 
 
