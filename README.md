@@ -143,6 +143,13 @@ You should see a list of all 51 files within the `dogs-webmap` folder.  The `U` 
 
 ![image](https://user-images.githubusercontent.com/3355358/173660915-fd6ab735-40f7-4c6f-95d1-7aa1a29edcbe.png)
 
+Once the files are staged, the display changes ever so slightly -- all the files are now listed under "Staged Changes".  The `A` after each filename indicates that these are new files that have been added.  (An `M` would indicate a file that was already being tracked that has been modified.)
+
+Click the checkmark icon at the top to commit the staged changes to your local repository.
+
+![image](https://user-images.githubusercontent.com/3355358/173662190-a3c89b5c-b19d-444c-aea3-ae95f19aa22b.png)
+
+
 
 
 
