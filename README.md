@@ -116,7 +116,7 @@ We are going to use GitHub Pages to host the webmap.  GitHub Pages can be used f
 
 We will use Visual Studio Code ("VS Code") to create a new GitHub Repository, push our files there, and publish using GitHub Pages.
 
-Find the qgis2web output folder (using Windows File Explorer, MacOS Finder, etc.) -- the name will look something like `qgis2web_2022_06_16_10_54_37_779288` which is pretty long, so we'll rename it (using only numbers, letters, hyphens, and underscores, since it will also be the name of our github repository)
+Find the qgis2web output folder (using Windows File Explorer, MacOS Finder, etc.) -- the name will look something like `qgis2web_2022_06_16_10_54_37_779288` which is pretty long, so we'll rename it (using only numbers, letters, hyphens, and underscores, since it will also be the name of our GitHub repository)
 
 - Rename the folder to something like `dogs-webmap`
 - Open the folder
@@ -145,9 +145,29 @@ You should see a list of all 51 files within the `dogs-webmap` folder.  The `U` 
 
 Once the files are staged, the display changes ever so slightly -- all the files are now listed under "Staged Changes".  The `A` after each filename indicates that these are new files that have been added.  (An `M` would indicate a file that was already being tracked that has been modified.)
 
-Click the checkmark icon at the top to commit the staged changes to your local repository.
-
 ![image](https://user-images.githubusercontent.com/3355358/173662190-a3c89b5c-b19d-444c-aea3-ae95f19aa22b.png)
+
+- Click the checkmark icon at the top to commit the staged changes to your local repository.
+- In the prompt at top center of the window, type a short commit message (something like "inital qgis2web files") and press enter
+
+Now, let's publish our files to GitHub.
+
+- Click the "Publish Branch" button
+
+At top center, you have an option to rename the GitHub
+repository (leave it as `dogs-webmap`).  And you also can choose whether to publish it as a private or public repository.  You can choose either, although the GitHub Pages site will always be public, so you might as well make the repository public.  (It will still be read-only, so no one can make changes unless you explicitly grant them that permission.)
+
+- Click "Publish to GitHub public repository"
+
+It may take a moment for the files to transfer.  When complete, you should see a message at bottom right.
+
+- Click "Open on GitHub"
+
+The GitHub webpage for your new repository should appear in your web browser.  We are almost there!  The last step is to activate GitHub Pages to publish these files as an actual website.
+
+
+
+If you look at the `dogs-webmap` folder in your system's file browser, you may notice that there is a new hidden folder called `.git` that contains special files for tracking changes.  Don't mess with these files!  (Depending on your system configuration, you may not even see this folder, since it is marked as a hidden system folder.  It also does not appear in the VS Code explorer.)
 
 
 
