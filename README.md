@@ -3,13 +3,14 @@
 Instructor: Keith Jenkins
 
 In this workshop, we will use several tools to publish a public webmap from an existing QGIS project:
-- QGIS2Web: a QGIS plugin that creates all the HTML/CSS/Javascript/etc. files for the webmap
-- Visual Studio Code: a powerfull code editor that will let us make changes to those files and automatically use Git to send the files to our own GitHub repository
-- GitHub: a website that hosts Git repositories and allows us to create basic websites
+- **qgis2web** is a QGIS plugin that creates all the HTML/CSS/Javascript/etc. files for the webmap
+- **Visual Studio Code** ("VS Code") is a powerfull code editor that will let us make and track changes to those files and send them to GitHub
+- **GitHub**: a website that hosts Git repositories and allows us to create basic websites
+- **Git** is a versioning tool and protocol that works behind the scenes to track changes to files.  Although it is also possible to use Git directly, we will use it indirectly through both VS Code and GitHub.
 
 ## Before the session
 
-Before the workshop, please go ahead and install Visual Studio Code and Git.
+Before the workshop, please go ahead and install Visual Studio Code and Git, following the instructions below.
 
 ### Install Microsoft Visual Studio Code
 
@@ -108,7 +109,7 @@ Once the files are saved, the webmap will automatically open in your web browser
 
 
 
-### Publishing the webmap
+### Pushing the files to GitHub
 
 There are many different ways of hosting the webmap files online.  If you already have file access to a standard web server, you could simply copy the output folder of files to that server.
 
@@ -163,15 +164,48 @@ It may take a moment for the files to transfer.  When complete, you should see a
 
 - Click "Open on GitHub"
 
-The GitHub webpage for your new repository should appear in your web browser.  We are almost there!  The last step is to activate GitHub Pages to publish these files as an actual website.
+The GitHub webpage for your new repository should appear in your web browser.  We are almost there!
+
+### Publishing a website via GitHub Pages
+
+The last step is to activate GitHub Pages to publish these files as an actual website.
+
+- On the GitHub page for your repository, click "Settings" (near the top)
+- Click "Pages" (left)
+- Under "Source", change where it says "None" to "main"
+- Click "Save"
+
+It should now say "Your site is ready to be published at `https://{username}.github.io/dogs-webmap`"
+
+- Click the link
+
+If your webmap doesn't open at first, it may be that GitHub is still building the site, which usually takes less than a minute for a simple qgis2web web map.  Be patient and try again after a short wait.
+
+### Modifying the webmap
+
+As we saw, there are many different settings we can change when exporting the webmap via qgis2web.  We could also change the symbology in QGIS and re-export the files.
+
+But with just a little knowledge of HTML, CSS, and Javascript, we can also edit the output files directly, which will give us an even greater level of customization.
+
+Let's make some changes to our local files, test the results in our web browser.  When we are ready, we can then update GitHub with the updated files.
+
+First, let's do something about those long lists of every single attribute that shows up when we click a point.  Let's simplify the popups to just show the jurisdiction and name and breed of the dog.
+
+- In VS Code, click the "Explorer" icon (top left)
+- Click the `index.html` file to edit it
+
+If you've never worked with HTML/CSS/Javascript before, it might look a bit scary!  But don't worry -- we'll find some bits of text we can recognize, and if we make any fatal mistakes that break the webmap, we can always go back to the previous version that we have committed.
+
+Scroll down to line 124, where we start to see some code that goes through each attribute in the dog license data.  Each attribute is within `<tr>...</tr>` tags, which stands for "table row".  We can simply remove the table rows we don't want to show.
+
+https://user-images.githubusercontent.com/3355358/173693548-1d852148-cb6c-482e-a206-5affcb00d136.mp4
 
 
 
-If you look at the `dogs-webmap` folder in your system's file browser, you may notice that there is a new hidden folder called `.git` that contains special files for tracking changes.  Don't mess with these files!  (Depending on your system configuration, you may not even see this folder, since it is marked as a hidden system folder.  It also does not appear in the VS Code explorer.)
 
+### Notes
 
-
-
+Any folders being tracked as a local Git repository will have a hidden folder called `.git` that contains special files for tracking changes.  Don't mess with these files!  (Depending on your system configuration, you may not even see this folder, since it is marked as a hidden system folder.  It also does not appear in the VS Code explorer.)  Only the outermost folder will have this .git folder -- subfolders will not have one.
 
 
 
