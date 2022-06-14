@@ -128,6 +128,9 @@ Let's open all this as a project within VS Code
 - Right-click the blank space within the `dogs-webmap` folder > Open with Code
 - Close the "Get Started" tab if it appears
 
+![image](https://user-images.githubusercontent.com/3355358/173659220-7eec4e46-cb77-4a3a-bb3a-56a44ac80dbe.png)
+
+
 
 
 
