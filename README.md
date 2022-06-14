@@ -181,7 +181,7 @@ It should now say "Your site is ready to be published at `https://{username}.git
 
 If your webmap doesn't open at first, it may be that GitHub is still building the site, which usually takes less than a minute for a simple qgis2web web map.  Be patient and try again after a short wait.
 
-### Modifying the webmap
+### Modifying the webmap code
 
 As we saw, there are many different settings we can change when exporting the webmap via qgis2web.  We could also change the symbology in QGIS and re-export the files.
 
@@ -196,11 +196,43 @@ First, let's do something about those long lists of every single attribute that 
 
 If you've never worked with HTML/CSS/Javascript before, it might look a bit scary!  But don't worry -- we'll find some bits of text we can recognize, and if we make any fatal mistakes that break the webmap, we can always go back to the previous version that we have committed.
 
-Scroll down to line 124, where we start to see some code that goes through each attribute in the dog license data.  Each attribute is within `<tr>...</tr>` tags, which stands for "table row".  We can simply remove the table rows we don't want to show.
+Scroll down to line 124, where we start to see some code for the pitbull popup that goes through each attribute in the dog license data.  Each attribute is within `<tr>...</tr>` tags, which stands for "table row".  We can simply remove the table rows we don't want to show.
 
 https://user-images.githubusercontent.com/3355358/173693548-1d852148-cb6c-482e-a206-5affcb00d136.mp4
 
+The trick is to delete whole `<tr>...</tr>` sections.  If you leave a stray opening `<tr>` or closing `</tr>` tag, you may get an error when viewing in a web browser.
 
+- Delete at least some of the unwanted rows from both the pitbull popup and the beagle popup (further down).
+
+You may notice that whenever you delete lines, there is a red triangle marker indicating where the deleted lines used to be.
+
+Also, there is a circle icon up next to the `index.html` tab, indicating that there are unsaved changes.
+
+- Press CTRL-S to save your edits.
+- In your web browser, reload your local copy of the webmap (the one where the URL starts with `file:///`) to check your changes.
+
+If something goes wrong, try checking that your remain `<tr>...</tr>` pairs match up.  You could also use CTRL-Z to undo your edits to back up to before the mistake.
+
+### Updating your local repository
+
+After saving changes, you should see a number "1" appear on the "Source Control" icon on the left side of the VS Code window, indicating that there is one file that has been changed since the last commit.
+
+- Click the "Source Control" icon to see which files have changes
+
+If you've really messed things up and just want to go back to the last committed version, you can click the curved back-arrow icon ("Discard Changes").
+
+Otherwise, if you like your changes and want to commit them:
+
+- Click the `+` for the file you want to stage
+- Enter a brief message describing the commit
+- Click the checkmark icon at the top -- this commits the staged changes to your local Git repository
+- Click "Sync Changes" to push the changes to GitHub
+
+https://user-images.githubusercontent.com/3355358/173695377-03da23a7-5c18-439b-90c3-577c98adb2f0.mp4
+
+At this point, you can reload your repository page on GitHub to confirm that your changes appear there.  There is no need to do anything else for GitHub Pages, since it will automatically update your site whenever new changes are pushed to GitHub.
+
+Go back to your GitHub pages site (`https://{username}.github.io/dogs-webmap`) and press CTRL-SHIFT-R to force your web browser to reload the site.  (Sometimes the normal CTRL-R is not enough, since your browser tries to re-used cached files as much as it can.)
 
 
 ### Notes
