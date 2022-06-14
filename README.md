@@ -63,7 +63,7 @@ This project has 4 layers:
 - Municipal_Boundaries = city and village boundaries
 - Stamen Toner Lite = a muted basemap that lets our data stand out
 
-### Creating the webmap
+### Creating the webmap files
 
 We are going to use the qgis2web plugin to create a small website that contains an interactive version of the map that can be viewed in a web browser.
 
@@ -106,8 +106,6 @@ On the "Export" tab:
 - Click the "Export" button (bottom)
 
 Once the files are saved, the webmap will automatically open in your web browser.  Note that the URL begins with `file:///`, which indicates that the webpage is coming from a local file, not the internet.
-
-
 
 ### Pushing the files to GitHub
 
@@ -202,7 +200,7 @@ https://user-images.githubusercontent.com/3355358/173693548-1d852148-cb6c-482e-a
 
 The trick is to delete whole `<tr>...</tr>` sections.  If you leave a stray opening `<tr>` or closing `</tr>` tag, you may get an error when viewing in a web browser.
 
-- Delete at least some of the unwanted rows from both the pitbull popup and the beagle popup (further down).
+- Delete at least some of the unwanted rows from both the pitbull popup and the beagle popup (further down in the `index.html` file).
 
 You may notice that whenever you delete lines, there is a red triangle marker indicating where the deleted lines used to be.
 
@@ -211,7 +209,7 @@ Also, there is a circle icon up next to the `index.html` tab, indicating that th
 - Press CTRL-S to save your edits.
 - In your web browser, reload your local copy of the webmap (the one where the URL starts with `file:///`) to check your changes.
 
-If something goes wrong, try checking that your remain `<tr>...</tr>` pairs match up.  You could also use CTRL-Z to undo your edits to back up to before the mistake.
+If something goes wrong, try checking that your remaining `<tr>...</tr>` pairs match up.  You could also use CTRL-Z to undo your edits to back up to before the mistake.  You can also always go back to a previously-committed version, as described below.
 
 ### Updating your local repository
 
@@ -221,11 +219,16 @@ After saving changes, you should see a number "1" appear on the "Source Control"
 
 If you've really messed things up and just want to go back to the last committed version, you can click the curved back-arrow icon ("Discard Changes").
 
-Otherwise, if you like your changes and want to commit them:
+If you want to see exactly what has changed, click on the filename, and VS Code will show what is commonly called a "diff", a color-coded display of changes, with red indicating deletions, and green indicating additions.  Git generally works line by line, so even if you change just a single letter, it will look like you removed the whole line and replaced it with a new one.
+
+If you like your changes and want to commit them:
 
 - Click the `+` for the file you want to stage
 - Enter a brief message describing the commit
 - Click the checkmark icon at the top -- this commits the staged changes to your local Git repository
+
+# Pushing your changes to GitHub
+
 - Click "Sync Changes" to push the changes to GitHub
 
 https://user-images.githubusercontent.com/3355358/173695377-03da23a7-5c18-439b-90c3-577c98adb2f0.mp4
@@ -234,14 +237,32 @@ At this point, you can reload your repository page on GitHub to confirm that you
 
 Go back to your GitHub pages site (`https://{username}.github.io/dogs-webmap`) and press CTRL-SHIFT-R to force your web browser to reload the site.  (Sometimes the normal CTRL-R is not enough, since your browser tries to re-used cached files as much as it can.)
 
-
-### Notes
+### Git Notes
 
 Any folders being tracked as a local Git repository will have a hidden folder called `.git` that contains special files for tracking changes.  Don't mess with these files!  (Depending on your system configuration, you may not even see this folder, since it is marked as a hidden system folder.  It also does not appear in the VS Code explorer.)  Only the outermost folder will have this .git folder -- subfolders will not have one.
 
+Git also has a concept of "branches", which are different, possibly experimental, versions of a repository.  For example, I might create a new branch for some substantial data cleanup.  I can easily switch between branches, so I can easily interrupt my cleanup work in progress, switch back to the main branch to fix something in my existing web map, commit that to GitHub to update my public webmap, then switch back to the data-cleanup branch to continue my work there.
 
+### GitHub Notes
 
+GitHub has a bunch of other useful features, including:
+- **Issues**, for documenting tasks to be done, assigning people to do them, and having conversations about rationales and approaches
+- **Pull Requests**, which allow collections of commits to be bundled and proposed for approval.  For example, I might add some new features to your webmap -- you could look at the changes, try them out, and either approve them or suggest further edits.  A pull request (or "PR") is often tied to a specific branch, to isolate the PR from other changes that might be happening.
+- **Projects**, which makes it easier to organize, filter, and sort collections of issues and pull requests
+- **Wikis**, which can be used to help document your project (or just make the documentation part of repository)
 
+### VS Code Notes
+
+VS Code has a lot of powerful editing features, including:
+- search and replace across many files at once:
+  - all files in the project
+  - or just selected filetypes
+  - regular expressions for more sophisticated matching
+- fast switching between Git branches
+- extensions for specific tasks or types of files, such as:
+  - "Edit csv" lets you view and edit .csv files in a table viewer (rather than plaintext)
+  - Syntax highlighters to provide context-aware color coding for various file types and programming languages
+  - Customizable keyboard shortcuts to mimic other popular code editors
 
 ## After the session
 
