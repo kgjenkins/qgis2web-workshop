@@ -26,7 +26,6 @@ Microsoft's Visual Studio Code ("VS Code") is a powerful text editor that can be
 
 The first time you run VS Code, you'll see a "Getting Started" tab that will walk you through various setup and customization options.  Feel free to explore, but you can also just close that tab.  (You can always get back to it later via the "Help" menu.)
 
-
 ### Install Git
 
 You should see five icons along the left side of VS Code.
@@ -48,11 +47,33 @@ If you don't yet have Git installed, you should see a button to "Download Git fo
 
 ## During the session
 
-Download the sample QGIS project and data from:
-- https://github.com/kgjenkins/webmap-workshop/archive/refs/heads/main.zip
+Download the sample QGIS project and data from
+https://github.com/kgjenkins/webmap-workshop/archive/refs/heads/main.zip
 
 Be sure to unzip the .zip file.
+- On Windows: right-click the .zip file > Extract All...
 
+Browse into the extracted folders until you are in the folder where you see the files.
+- Open the QGIS Project: `dog-map.qgz`
+
+This project has 4 layers:
+- Beagle = just the records from the CSV file of dog licenses where `primary_breed='BEAGLE'`
+- Pit Bull = just the records from the CSV file of dog licenses where `primary_breed='PIT BULL'`
+- Municipal_Boundaries = city and village boundaries
+- Stamen Toner Lite = a muted basemap that lets our data stand out
+
+We are going to use the qgis2web plug-in to create a small website that contains an interactive version of the map that can be viewed in a web browser.
+
+To install the plugin:
+- "Plugins" menu > Manage and Install Plugins...
+- Select the "All" tab on the left
+- Search for qgis2web
+- Click the "Install Plugin" button (bottom-right)
+
+Once the plugin in installed:
+- "Web" menu > qgis2web > Create web map
+
+The dialog has several tabs of options.  The first tab "Layers and Groups" lets you control which layers are visible, whether features in a layer will display popups when clicked, and how the attribute data will be formatted.
 
 ## After the session
 
