@@ -75,6 +75,13 @@ Once the plugin in installed:
 
 The dialog has several tabs of options.  The first tab "Layers and Groups" lets you control which layers are visible, whether features in a layer will display popups when clicked, and how the attribute data will be formatted.
 
+For example, this configuration:  
+![image](https://user-images.githubusercontent.com/3355358/173639307-fb6493ff-adf8-4dc4-8b43-b5f9a3913aa8.png)
+
+will show a popup like this:  
+![image](https://user-images.githubusercontent.com/3355358/173639497-e0cf7d5e-0e15-4263-9f15-7ee60d254e8d.png)
+
+
 ## After the session
 
 ### Reflection
