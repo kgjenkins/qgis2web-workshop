@@ -207,7 +207,10 @@ You may notice that whenever you delete lines, there is a red triangle marker in
 Also, there is a circle icon up next to the `index.html` tab, indicating that there are unsaved changes.
 
 - Press CTRL-S to save your edits.
-- In your web browser, reload your local copy of the webmap (the one where the URL starts with `file:///`) to check your changes.
+
+Let's open the modified local file in our web browser to see the effects of our changes.
+
+- Double-click the `index.html` file in your file browser (Windows File Explorer or MacOS Finder)
 
 If something goes wrong, try checking that your remaining `<tr>...</tr>` pairs match up.  You could also use CTRL-Z to undo your edits to back up to before the mistake.  You can also always go back to a previously-committed version, as described below.
 
