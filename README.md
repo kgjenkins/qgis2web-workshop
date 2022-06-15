@@ -3,9 +3,9 @@
 Instructor: Keith Jenkins
 
 In this workshop, we will use several tools to publish a public webmap from an existing QGIS project:
-- **qgis2web** is a QGIS plugin that creates all the HTML/CSS/Javascript/etc. files for the webmap
+- **qgis2web** is a QGIS plugin that creates all the HTML, CSS, and JavaScript files for the webmap
 - **Visual Studio Code** ("VS Code") is a powerfull code editor that will let us make and track changes to those files and send them to GitHub
-- **GitHub**: a website that hosts Git repositories and allows us to create basic websites
+- **GitHub** is a website that hosts Git repositories and allows us to create basic websites
 - **Git** is a versioning tool and protocol that works behind the scenes to track changes to files.  Although it is also possible to use Git directly, we will use it indirectly through both VS Code and GitHub.
 
 ## Before the session
@@ -84,19 +84,19 @@ For example, this configuration:
 will show a popup like this:  
 ![image](https://user-images.githubusercontent.com/3355358/173639497-e0cf7d5e-0e15-4263-9f15-7ee60d254e8d.png)
 
-Leave the settings as they are for now.  There is currently no option directly within qgis2web to omit an attribute from the popup, so sometimes it is helpful to create a copy of the layer that only contains the attributes we want to display.  We can also edit the HTML output later to further customize the popups.
+Leave the settings as they are for now.  There is currently no option directly within the qgis2web dialog to omit an attribute from the popup, so sometimes it is helpful to create a copy of the layer that only contains the attributes we want to display.  Another option is, in the "attributes form" section of the layer properties, to set the "widget type" of specific fields to "hidden".  Below, we are going to edit the HTML output to further customize the popups for the Beagle and Pit Bull layers.  Note that the Municipal_Boundaries layer has been set to not show popups at all.
 
 The qgis2web plugin can output webmaps using three different webmapping frameworks (OpenLayers, Leaflet, and Mapbox GL JS).
 
 - Select "Leaflet" (bottom)
 - Click the "Update preview" button (bottom)
 
-Explore the webmap preview, and try clicking a point.  Again, we see that there is more information display than we would like, but we will fix this later.
+Explore the webmap preview, and try clicking a point.  Again, we see that the popups have more information than we would really like to show, but we will fix this later.
 
 On the "Appearance" tab:
 - Set "Add layers list" to "Expanded"
 - Set "Template" to "full-screen"
-- Set "Max zoom level" to 19 (which is near the limit of the basemap)
+- Set "Max zoom level" to 18 (which is the limit of the basemap)
 - Check the box for "Restrict to extent"
 
 Click the "Update preview" button again to check the output.  When we are ready, we can export the webmap files to a folder.
@@ -146,8 +146,8 @@ Once the files are staged, the display changes ever so slightly -- all the files
 
 ![image](https://user-images.githubusercontent.com/3355358/173662190-a3c89b5c-b19d-444c-aea3-ae95f19aa22b.png)
 
-- Click the checkmark icon at the top to commit the staged changes to your local repository.
-- In the prompt at top center of the window, type a short commit message (something like "inital qgis2web files") and press enter
+- Click the checkmark icon at the top to commit the staged changes to your local repository
+- In the prompt at top center of the window, type a short commit message (something like "initial qgis2web files") and press enter
 
 Now, let's publish our files to GitHub.
 
