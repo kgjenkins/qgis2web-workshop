@@ -269,7 +269,7 @@ VS Code has a lot of powerful editing features, including:
 
 ### qgis2web Notes
 
-qgis2web is great at getting a basic webmap up and running, and even has options for adding things like a layer menu and a search box for features.  For additional features, you can use additional capabilities from [Leaflet](https://leafletjs.com/) such as the [many plugins](https://leafletjs.com/plugins.html) it has available.  Similar capabilities can be found for [OpenLayers](https://openlayers.org/), although each has some unique features not found elsewhere.  In more complex webmaps, custom JavaScript could be used to develop nearly any possible user interface you can imagine.
+qgis2web is great at getting a basic webmap up and running, and even has options for adding things like a layer menu and a search box.  [Leaflet](https://leafletjs.com/) also has [many plugins](https://leafletjs.com/plugins.html) that provide extra features and functionality.  Similar capabilities can be found for [OpenLayers](https://openlayers.org/), although each has some unique features not found elsewhere.  In more complex webmaps, custom JavaScript could be used to develop nearly any possible user interface you can imagine.
 
 ## After the session
 
