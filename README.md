@@ -166,7 +166,7 @@ Now, let's publish our files to GitHub.
 - Click the "Publish Branch" button
 
 At top center, you have an option to rename the GitHub
-repository (leave it as `dogs-webmap`).  And you also can choose whether to publish it as a private or public repository.  You can choose either, although the GitHub Pages site will always be public, so you might as well make the repository public.  (It will still be read-only, so no one can make changes unless you explicitly grant them that permission.)
+repository (leave it as `dogs-webmap`).  And you also can choose whether to publish it as a private or public repository.  Unless you have a paid GitHub account, you will need to publish it as a public repository.  (The GitHub Pages site will be public anyway.)  Note that a public repository is read-only for other users, so no one can make changes unless you explicitly grant them that permission.
 
 - Click "Publish to GitHub public repository"
 
