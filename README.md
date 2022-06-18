@@ -137,6 +137,7 @@ Before we start any editing, let's create a local repository so that we can trac
 - Click the "Initialize Repository" button
 
 > **Note**
+>
 > If this is your first time using Git on your computer, you will need to configure the e-mail address and name that will be associated with your commits.
 > We can set these values using the VS Code's "Terminal":
 > - Terminal menu > New Terminal
@@ -147,7 +148,7 @@ Before we start any editing, let's create a local repository so that we can trac
 >   ```
 > You may need to click the "Initialize Repository" button again.
 
-You should see a list of all 51 files within the `dogs-webmap` folder.  The `U` to the right of each filename means that the file is currently untracked.  We want to track all these files, so:
+Once the local repository is set up, you should see a list of all 51 files within the `dogs-webmap` folder.  The `U` to the right of each filename means that the file is currently untracked.  We want to track all these files, so:
 
 - On the row at the top that says "Changes", click the `+` symbol to stage all changes.  (We could also stage files individually, but in this case we want them all.)
 
