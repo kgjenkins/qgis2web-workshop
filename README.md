@@ -134,7 +134,18 @@ On the left, you should see a list of the folders and files in the `dogs-webmap`
 Before we start any editing, let's create a local repository so that we can track any changes.
 
 - Click the 3rd icon ("Source Control")
-- Click the "Initial Repository" button
+- Click the "Initialize Repository" button
+
+> **Note**
+> If this is your first time using Git on your computer, you will need to configure the e-mail address and name that will be associated with your commits.
+> We can set these values using the VS Code's "Terminal":
+> - Terminal menu > New Terminal
+> - In the Terminal panel that opens, enter the following commands (using the actual email and name you wish to use):
+>   ```
+>   git config --global user.email "test@example.com"
+>   git config --global user.name "Your Name"
+>   ```
+> You may need to click the "Initialize Repository" button again.
 
 You should see a list of all 51 files within the `dogs-webmap` folder.  The `U` to the right of each filename means that the file is currently untracked.  We want to track all these files, so:
 
